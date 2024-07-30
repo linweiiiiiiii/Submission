@@ -1,0 +1,39 @@
+<!-- product.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Food Reivew Website</title>
+</head>
+<body>
+  <%- include('partials/navbar.ejs') %>
+  
+    <div class="container">
+        <br>
+        <div class="text-center"><h2>Food establishment Details</h2></div>
+        <br>
+        <% if (establishment) { %> <!-- Check if product data exists -->
+            <div>
+                <p><b>Establishment Name:</b><br> <%= establishments.place_name %></p>
+                <p><b>Image:</b><br> <img src = "/images/<%= establishments.image %>" width="20%"></p>
+                <p><b>Description:</b><br> <%= establishments.short_description %></p>
+                <p><b>Rating:</b><br> <%= establishments.rating %></p> 
+                <p><b>Dining type:</b><br> <%= establishments.dining_type %></p>
+                <p><b>Address:</b><br> <%= establishments.address %></p> 
+                <p><b>Opening Hours:</b><br> <%= establishments.opening_hours %></p>
+                <p><b>Menu:</b><br> <%= establishments.menu %></p>
+            </div>
+        <% } else { %>
+            <p>No establishments found.</p>
+        <% } %>
+        <a href ="/">Back</a>
+    </div>
+    
+</body>
+</html>
+
+<!--23012076 LimlinWei-->

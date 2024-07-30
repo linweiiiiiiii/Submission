@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food review Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-img-top {
+            height: 150px;
+            object-fit: contain;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <%- include('partials/navbar') %>
+    <br>
+
+    <!--Chnage the relevant information into the correct info after setting up the database-->
+    <div class="container">
+        <br>
+        <div class="text-center"><h2>Add New Establishment</h2></div>
+        <br>
+        <div class="text-center">
+            <form action="/establishments" method="POST">
+                <label for="place_name">Establishment name:</label><br>
+                <input type="text" id="place_name" name="place_name" required><br><br>
+
+                <label for="short_description">short description:</label><br>
+                <input type="text" id="short_description" name="short_description" required><br><br>
+
+                <label for="rating">Rating:</label><br>
+                <input type="number" id="rating" name="rating" min="0" step="0.1" max="5" required><br><br>
+                
+                <label for="dining_type"> Dining type:</label><br>
+                <input type="text" id="dining_type" name="dining_type" required><br><br>
+
+                <label for="address"> Address:</label><br>
+                <input type="text" id="address" name="address" required><br><br>
+
+                <label for="opening_hours"> Opening hours:</label><br>
+                <input type="text" id="opening_hours" name="opening_hours" required><br><br>
+
+                <label for="menu"> Menu link:</label><br>
+                <input type="text" id="menu" name="menu" required><br><br>
+                
+                <label for="image">Image:</label><br>
+                <input type="text" id="image" name="image" required><br><br>
+
+                <button type="submit">Add establishment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--23012076 LimlinWei-->
