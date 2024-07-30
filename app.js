@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const multer = require('multer');
 const app = express(); 
 
-// Set up multer for file uploads
+// Set up multer for file upload
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images'); //Directory to save uploaded files
